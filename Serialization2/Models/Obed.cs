@@ -10,5 +10,10 @@ namespace Serialization2.Models
     {
         public int Id { get; set; }
         public string Nazev { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id} {Nazev}";
+        }
     }
 }
