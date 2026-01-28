@@ -13,7 +13,18 @@ internal class Program
         string decision1 = InputHelper.InputText("Would you like to serialize?[y/n]");
         if (decision1.Trim().ToLower().Equals("y"))
         {
-
+            if (serializer.Serialize(o))
+            {
+                Console.WriteLine("Done");
+            }
+            else
+            {
+                Console.WriteLine("Cannot serialize");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Ended without serialize");
         }
     }
 }
